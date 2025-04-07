@@ -7,8 +7,8 @@
     "rollback": "npx knex migrate:rollback",
     "start": "node Server.js",
     "dev": "nodemon Server.js",
-    "migrate": "knex migrate:latest --knexfile knexfile.js",
-    "postinstall": "npm run migrate"
+    "migrate": "knex migrate:latest --knexfile knexfile.js"
+    
   },
   "keywords": [],
   "author": "",

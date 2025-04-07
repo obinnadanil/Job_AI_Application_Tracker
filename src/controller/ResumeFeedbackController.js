@@ -21,7 +21,7 @@ const getRandomSuggestions = () => {
   
     const lowerText = text.toLowerCase();
 
-    if (!resume_text || resume_text.length < 50) {
+    if (!text || text.length < 50) {
       feedback.push("Resume text is too short for meaningful feedback.");
       return res.status(200).json({
         message: "AI Resume Feedback",
@@ -58,6 +58,7 @@ const getRandomSuggestions = () => {
   const getResumeFeedback = (req, res) => {
     try {
       const { resume_text } = req.body;
+      console.log('resume text: ',resume_text);
   
       const contextualFeedback = analyzeResumeText(resume_text);
       const randomSuggestions = getRandomSuggestions();
