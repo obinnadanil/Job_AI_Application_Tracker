@@ -107,7 +107,7 @@ This project is a web application designed to help users track and manage simula
 
 ### Public Routes
 
-- `POST /api/user/register` — Register a new user  
+- `POST /api/user` — Register a new user  
 - `POST /api/user/login` — Authenticate user and return JWT  
 
 ---
