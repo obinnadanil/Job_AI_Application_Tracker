@@ -6,7 +6,9 @@
     "setup:database": "npx knex migrate:latest",
     "rollback": "npx knex migrate:rollback",
     "start": "node Server.js",
-    "dev": "nodemon Server.js"
+    "dev": "nodemon Server.js",
+    "migrate": "knex migrate:latest --knexfile knexfile.js",
+    "postinstall": "npm run migrate"
   },
   "keywords": [],
   "author": "",
