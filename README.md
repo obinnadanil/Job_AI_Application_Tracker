@@ -96,3 +96,41 @@ This project is a web application designed to help users track and manage simula
 - **Backend**: Node.js, Express, Knex, PostgreSQL
 - **Deployment**: Vercel (Frontend), Render (Backend)
 - **Authentication**: JWT
+
+## Backend API Endpoints
+
+### Base URL
+- **Local**: `http://localhost:5000/api`  
+- **Production**: `https://job-ai-application-tracker-backend.onrender.com/api`
+
+---
+
+### Public Routes
+
+- `POST /api/user/register` — Register a new user  
+- `POST /api/user/login` — Authenticate user and return JWT  
+
+---
+
+### Protected Routes (Require JWT)
+
+- `POST /api/job` — Create a new job application  
+- `GET /api/job` — Get all job applications for the authenticated user  
+- `GET /api/job/:id` — Get a specific job application by ID  
+- `PUT /api/job/:id` — Update a job application  
+- `DELETE /api/job/:id` — Delete a job application  
+
+- `POST /api/resume/feedback` — Submit a resume and get feedback  
+- `GET /api/jobs/recommendations` — Get AI job recommendations  
+
+> **Note:** All protected routes require the `Authorization: Bearer <token>` header.
+
+
+## Frontend Routes
+
+- `/register` — User registration  
+- `/login` — User login  
+- `/job-form` — Submit a new job application  
+- `/job-recommendations` — View AI-generated job recommendations  
+- `/resume-feedback` — Get feedback on uploaded resumes  
+- `/job-listing` — View and manage all submitted job applications  
