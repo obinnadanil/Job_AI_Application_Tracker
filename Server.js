@@ -8,7 +8,11 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+const allowedOrigins = ['http://localhost:3000', 'https://job-ai-tracker-frontend.vercel.app']; 
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+  }));
 app.use('/api', apiRoute);
 
 

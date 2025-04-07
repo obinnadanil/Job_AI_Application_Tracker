@@ -58,7 +58,6 @@ const getRandomSuggestions = () => {
   const getResumeFeedback = (req, res) => {
     try {
       const { resume_text } = req.body;
-      console.log('resume text: ',resume_text);
   
       const contextualFeedback = analyzeResumeText(resume_text);
       const randomSuggestions = getRandomSuggestions();
