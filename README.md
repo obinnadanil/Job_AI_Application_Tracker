@@ -1,6 +1,6 @@
 # AI-Powered Job Application Tracker
 
-This project is a web application designed to help users track and manage their job applications. It includes features such as storing resume data, providing feedback on resumes, managing job application statuses, and more. The application is split into two parts: a frontend built with Next.js and a backend built with Node.js and Express.
+This project is a web application designed to help users track and manage simulated job applications. It includes features such as storing resume data, providing feedback on resumes,job recommentaions based on enetred user skills using remotive REST API, managing job application statuses, and more. The application is split into two parts: a frontend built with Next.js and a backend built with Node.js and Express.  
 
 ## Live Demo
 - **Frontend (Deployed on Vercel)**: [Job AI Tracker Frontend](https://job-ai-tracker-frontend.vercel.app)
@@ -82,10 +82,10 @@ This project is a web application designed to help users track and manage their 
 
 1. **Knex Migrations**: Run migrations to set up the database schema.
     ```bash
-    npm run migrate
+    npm run setupd:database
     ```
 
-2. **Database Configuration**: Configure your `.env` file with your database credentials (PostgreSQL).
+2. **Database Configuration**: Configure your `.env` file with your database credentials (PostgreSQL). Update your knexfile to reflect the keys defined in your `.env` file.
 
 ## Additional Features
 - **Resume Feedback**: The app provides suggestions on improving resumes based on analysis of the text (e.g., suggesting adding a summary section, use of action verbs, etc.).
